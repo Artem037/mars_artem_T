@@ -9,11 +9,11 @@
             {% endfor %}
         </ul>
     {% elif list == 'ol' %}
-        <ul>
-            {% for num, prof in profs %}
-                <h6>{{num}}. {{prof}}</h6>
+        <ol>
+            {% for prof in profs %}
+                <li>{{prof}}</li>
             {% endfor %}
-        </ul>
+        </ol>
     {% else %}
         <h4>Неверный параметр</h4>
     {% endif %}
