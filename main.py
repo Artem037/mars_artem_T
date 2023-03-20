@@ -1,5 +1,5 @@
 from flask import render_template
-from flask import Flask
+from flask import Flask, url_for
 
 app = Flask(__name__)
 
@@ -8,6 +8,11 @@ app = Flask(__name__)
 @app.route('/index/<title>')
 def index(title):
     return render_template('base.html', title=title)
+
+
+@app.route('/training/<prof>')
+def training(prof):
+    return render_template('training.html', prof=prof)
 
 
 if __name__ == '__main__':
