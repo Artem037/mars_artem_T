@@ -33,8 +33,6 @@ def list_prof(list):
              'киберинженер',
              'штурман',
              'пилот дронов']
-    if list == 'ol':
-        profs = enumerate(profs, start=1)
     return render_template('list_prof.html', list=list, profs=profs)
 
 
